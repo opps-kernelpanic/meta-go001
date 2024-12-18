@@ -18,6 +18,10 @@ IMAGE_INSTALL += " \
     curl \
     iw \
     wpa-supplicant \
+    ethtool \
+    net-tools \
+    traceroute \
+    iproute2 \
 "
 
 #-------------------------- Location - Time ------------------------------------
@@ -34,12 +38,15 @@ IMAGE_INSTALL += " \
     alsa-utils \
 "
 
+#------------------------------ Storage -----------------------------------------
+IMAGE_INSTALL += " mmc-utils"
+
+#------------------------------ Editor ------------------------------------------
+IMAGE_INSTALL += " vim"
+
 #------------------------------ Tools -------------------------------------------
 # Replace busybox with coreutils (which includes full 'ls', 'cp', etc.)
 IMAGE_INSTALL += " coreutils"
 # Replace busybox ps with procps
 IMAGE_INSTALL += " procps"
-IMAGE_INSTALL += " ethtool net-tools"
-IMAGE_INSTALL += " iproute2"
 
-IMAGE_INSTALL += " vim"
