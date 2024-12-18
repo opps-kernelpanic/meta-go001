@@ -1,0 +1,17 @@
+[connection]
+id=eth0
+uuid=5388b195-9697-4fc9-a023-dab3e374e8c3
+type=ethernet
+interface-name=end0
+
+[ethernet]
+
+[ipv4]
+address1=192.168.10.100/24,192.168.10.1
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]
