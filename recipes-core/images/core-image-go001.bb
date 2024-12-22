@@ -49,4 +49,5 @@ IMAGE_INSTALL += " vim"
 IMAGE_INSTALL += " coreutils"
 # Replace busybox ps with procps
 IMAGE_INSTALL += " procps"
+IMAGE_INSTALL += " rfkill"
 
