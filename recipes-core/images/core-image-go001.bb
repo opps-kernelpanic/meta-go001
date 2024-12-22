@@ -53,6 +53,8 @@ IMAGE_INSTALL += " vim"
 #------------------------------ Tools -------------------------------------------
 # Replace busybox with coreutils (which includes full 'ls', 'cp', etc.)
 IMAGE_INSTALL += " coreutils"
+# A suite of basic system administration utilities
+IMAGE_INSTALL += " util-linux"
 # Replace busybox ps with procps
 IMAGE_INSTALL += " procps"
 IMAGE_INSTALL += " lsof"
