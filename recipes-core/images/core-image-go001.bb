@@ -58,6 +58,7 @@ IMAGE_INSTALL += " util-linux"
 # Replace busybox ps with procps
 IMAGE_INSTALL += " procps"
 IMAGE_INSTALL += " lsof"
+IMAGE_INSTALL += " sudo"
 
 IMAGE_INSTALL += " rfkill"
 IMAGE_INSTALL += " lrzsz"
