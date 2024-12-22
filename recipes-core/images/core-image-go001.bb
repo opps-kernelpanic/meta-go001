@@ -34,6 +34,7 @@ IMAGE_INSTALL += " \
     ntp \
     ntpq \
     gpsd \
+    gps-utils \
 "
 
 #------------------------------ Audio -------------------------------------------
@@ -54,6 +55,8 @@ IMAGE_INSTALL += " vim"
 IMAGE_INSTALL += " coreutils"
 # Replace busybox ps with procps
 IMAGE_INSTALL += " procps"
+IMAGE_INSTALL += " lsof"
+
 IMAGE_INSTALL += " rfkill"
 IMAGE_INSTALL += " lrzsz"
 IMAGE_INSTALL += " i2c-tools"
