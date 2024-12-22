@@ -10,6 +10,11 @@ IMAGE_INSTALL += " systemd"
 USE_DEVFS = "1"
 VIRTUAL-RUNTIME_dev_manager = "udev"
 
+#------------------------------ Kernel -----------------------------------------
+IMAGE_INSTALL += " \
+    kernel-modules \
+"
+
 #------------------------------ Network ----------------------------------------
 IMAGE_INSTALL += " \
     openssh \
