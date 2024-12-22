@@ -55,4 +55,7 @@ IMAGE_INSTALL += " coreutils"
 # Replace busybox ps with procps
 IMAGE_INSTALL += " procps"
 IMAGE_INSTALL += " rfkill"
-
+IMAGE_INSTALL += " lrzsz"
+IMAGE_INSTALL += " i2c-tools"
+IMAGE_INSTALL += " spidev-test"
+IMAGE_INSTALL += " usbutils"
