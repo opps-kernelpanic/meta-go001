@@ -13,6 +13,10 @@ SRC_URI += " \
      file://eth0.nmconnection \
      "
 
+PACKAGECONFIG:append:pn-networkmanager = " modemmanager"
+PACKAGECONFIG:append:pn-networkmanager = " wwan"
+PACKAGECONFIG:append:pn-networkmanager = " wifi"
+
 do_install:append:stm32mpcommon () {
     install -d ${D}${sysconfdir}/NetworkManager/system-connections
     install -m 600 ${WORKDIR}/eth0.nmconnection ${D}${sysconfdir}/NetworkManager/system-connections/eth0.nmconnection
