@@ -27,6 +27,7 @@ IMAGE_INSTALL += " \
     net-tools \
     traceroute \
     iproute2 \
+    iptables \
 "
 
 #-------------------------- Location - Time ------------------------------------
