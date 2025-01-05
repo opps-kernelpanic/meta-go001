@@ -1,5 +1,5 @@
 [connection]
-id=end0_sharing
+id=end0
 uuid=8c7abf74-e143-4b75-8bd7-59a56296e180
 type=ethernet
 interface-name=end0

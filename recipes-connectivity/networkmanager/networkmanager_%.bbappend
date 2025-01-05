@@ -11,6 +11,7 @@ python do_display_banner() {
 
 SRC_URI += " \
      file://end0.nmconnection \
+     file://lte0.nmconnection \
      "
 
 PACKAGECONFIG:append:pn-networkmanager = " modemmanager"
@@ -20,6 +21,7 @@ PACKAGECONFIG:append:pn-networkmanager = " wifi"
 do_install:append:stm32mpcommon () {
     install -d ${D}${sysconfdir}/NetworkManager/system-connections
     install -m 600 ${WORKDIR}/end0.nmconnection ${D}${sysconfdir}/NetworkManager/system-connections/end0.nmconnection
+    install -m 600 ${WORKDIR}/lte0.nmconnection ${D}${sysconfdir}/NetworkManager/system-connections/lte0.nmconnection
 }
 
 addtask display_banner before do_build
