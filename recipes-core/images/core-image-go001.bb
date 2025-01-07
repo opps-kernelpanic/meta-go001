@@ -31,6 +31,11 @@ IMAGE_INSTALL += " \
     linux-firmware-rtl8821 \
 "
 
+#------------------------------ Network ----------------------------------------
+IMAGE_INSTALL += " \
+    bluez5 \
+"
+
 #-------------------------- Location - Time ------------------------------------
 IMAGE_INSTALL += " \
     ntp \
