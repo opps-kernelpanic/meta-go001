@@ -28,6 +28,7 @@ IMAGE_INSTALL += " \
     traceroute \
     iproute2 \
     iptables \
+    linux-firmware-rtl8821 \
 "
 
 #-------------------------- Location - Time ------------------------------------
