@@ -9,10 +9,8 @@ autoconnect=true
 mac-address-blacklist=
 
 [ipv4]
-method=manual
+method=shared
 address1=192.168.100.1/24
-dns=8.8.8.8;8.8.4.4;
-ignore-auto-dns=true
 
 [ipv6]
 addr-gen-mode=default
