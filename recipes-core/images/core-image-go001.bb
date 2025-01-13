@@ -1,4 +1,5 @@
-require recipes-core/images/core-image-minimal.bb
+# require recipes-core/images/core-image-weston.bb
+require recipes-graphics/images/core-image-weston.bb
 
 SUMMARY = "A small image just capable of allowing a device to boot."
 
@@ -17,7 +18,7 @@ IMAGE_INSTALL += " \
 
 #------------------------------ Network ----------------------------------------
 IMAGE_INSTALL += " \
-    openssh \
+    dropbear \
     modemmanager \
     networkmanager \
     curl \
@@ -72,3 +73,8 @@ IMAGE_INSTALL += " lrzsz"
 IMAGE_INSTALL += " i2c-tools"
 IMAGE_INSTALL += " spidev-test"
 IMAGE_INSTALL += " usbutils"
+
+#------------------------------ Wayland -----------------------------------------
+IMAGE_INSTALL += " weston"
+IMAGE_INSTALL += " mesa"
+IMAGE_INSTALL += " libpam"
