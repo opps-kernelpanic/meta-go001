@@ -72,3 +72,17 @@ IMAGE_INSTALL += " lrzsz"
 IMAGE_INSTALL += " i2c-tools"
 IMAGE_INSTALL += " spidev-test"
 IMAGE_INSTALL += " usbutils"
+
+#------------------------------ Debug tools -------------------------------------
+IMAGE_INSTALL += " strace"
+IMAGE_INSTALL += " gdb"
+IMAGE_INSTALL += " evtest"
+IMAGE_INSTALL += " gcc"
+
+#------------------------------ GUI package -------------------------------------
+IMAGE_INSTALL += " libdrm libdrm-dev"
+IMAGE_INSTALL += " binutils"
+IMAGE_INSTALL += " glibc glibc-dev"
+IMAGE_INSTALL += " libgcc libgcc-dev"
+IMAGE_INSTALL += " lvgl lvgl-demo-fb"
+
