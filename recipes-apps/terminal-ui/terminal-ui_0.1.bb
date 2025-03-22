@@ -3,10 +3,8 @@ DESCRIPTION = "meta-go001 This Bitbake file is used for the go001 user interface
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
-# FILESEXTRAPATHS:append := "${THISDIR}/files:"
-SRC_URI = "file://terminal-ui.c \
-            file://CMakeLists.txt \
-            "
+inherit cmake pkgconfig
+DEPENDS = "lvgl libdrm"
 
 python do_display_banner() {
     bb.plain("********************************************");
@@ -14,15 +12,14 @@ python do_display_banner() {
     bb.plain("********************************************");
 }
 
-addtask display_banner before do_build
-
-DEPENDS = "lvgl libdrm"
-
-# Set the build system
-inherit cmake pkgconfig
+TERMINAL_UI_LOCAL_PATH = "${THISDIR}/../../../sources/terminal-ui"
+# This task has been completed by copying everything from the submodule data.
+do_unpack() {
+    cp -r ${TERMINAL_UI_LOCAL_PATH}/* ${S}/
+}
 
 do_configure() {
-    cmake ${S}/../ \
+    cmake ${S}/ \
       -DCMAKE_SYSROOT=${STAGING_DIR_HOST} \
       -DLVGL_INCLUDE_DIR=${STAGING_DIR_HOST}/usr/include/lvgl \
       -DCMAKE_LIBRARY_PATH=${STAGING_DIR_HOST}/usr/lib
@@ -36,3 +33,5 @@ do_install() {
     install -d ${D}${bindir}
     install -m 755 terminal-ui ${D}${bindir}
 }
+
+addtask display_banner before do_build
