@@ -80,7 +80,7 @@ IMAGE_INSTALL += " lvgl"
 
 #------------------------------ User Application --------------------------------
 IMAGE_INSTALL += " terminal-ui"
-IMAGE_INSTALL += " system-manager"
+IMAGE_INSTALL += " sys-mgr"
 
 #------------------------------ Dev - Debug tools -------------------------------
 IMAGE_INSTALL += " strace"

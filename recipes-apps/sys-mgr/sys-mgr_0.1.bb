@@ -12,7 +12,7 @@ python do_display_banner() {
     bb.plain("********************************************");
 }
 
-SYSTEM_MANAGER_LOCAL_PATH = "${THISDIR}/../../../sources/system-manager"
+SYSTEM_MANAGER_LOCAL_PATH = "${THISDIR}/../../../sources/sys-mgr"
 # This task has been completed by copying everything from the submodule data.
 do_unpack() {
     cp -r ${SYSTEM_MANAGER_LOCAL_PATH}/* ${S}/
