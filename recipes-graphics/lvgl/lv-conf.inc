@@ -94,5 +94,34 @@ do_configure:append() {
         -e "s|^([[:space:]]*#define LV_USE_FLOAT[[:space:]]).*|\1${LVGL_CONFIG_USE_FLOAT}|" \
         \
         -e "s|^([[:space:]]*#define LV_USE_LOTTIE[[:space:]]).*|\1${LVGL_CONFIG_USE_LOTTIE}|" \
+        \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_8[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_8}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_10[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_10}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_12[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_12}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_14[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_14}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_16[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_16}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_18[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_18}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_20[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_20}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_22[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_22}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_24[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_24}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_26[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_26}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_28[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_28}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_30[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_30}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_32[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_32}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_34[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_34}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_36[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_36}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_38[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_38}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_40[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_40}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_42[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_42}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_44[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_44}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_46[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_46}|" \
+        -e "s|^([[:space:]]*#define LV_FONT_MONTSERRAT_48[[:space:]]).*|\1${LVGL_CONFIG_LV_FONT_MONTSERRAT_48}|" \
+        \
+        -e "s|^([[:space:]]*#define LV_DEF_REFR_PERIOD[[:space:]]).*|\1${LVGL_CONFIG_LV_DEF_REFR_PERIOD}|" \
+        -e "s|^([[:space:]]*#define LV_USE_SYSMON[[:space:]]).*|\1${LVGL_CONFIG_LV_USE_SYSMON}|" \
+        -e "s|^([[:space:]]*#define LV_USE_PERF_MONITOR[[:space:]]).*|\1${LVGL_CONFIG_LV_USE_PERF_MONITOR}|" \
+        \
+        -e "s|^([[:space:]]*#define LV_USE_PRIVATE_API[[:space:]]).*|\1${LVGL_CONFIG_LV_USE_PRIVATE_API}|" \
+        \
         -i "${S}/lv_conf.h"
 }
