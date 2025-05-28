@@ -35,7 +35,7 @@ do_install() {
     install -m 755 sys-utils ${D}${bindir}
 
     install -d ${D}${sysconfdir}/dbus-1/system.d
-    install -m 0644 ${S}/conf/org.example.Receiver.conf ${D}${sysconfdir}/dbus-1/system.d/
+    install -m 0644 ${S}/conf/com.SystemManager.Service.conf ${D}${sysconfdir}/dbus-1/system.d/
 }
 
 addtask display_banner before do_build
