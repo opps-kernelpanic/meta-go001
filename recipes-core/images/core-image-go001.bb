@@ -28,6 +28,12 @@ IMAGE_INSTALL += " \
     traceroute \
     iproute2 \
     iptables \
+    linux-firmware-rtl8821 \
+"
+
+#------------------------------ Network ----------------------------------------
+IMAGE_INSTALL += " \
+    bluez5 \
 "
 
 #-------------------------- Location - Time ------------------------------------
@@ -66,3 +72,22 @@ IMAGE_INSTALL += " lrzsz"
 IMAGE_INSTALL += " i2c-tools"
 IMAGE_INSTALL += " spidev-test"
 IMAGE_INSTALL += " usbutils"
+
+
+#------------------------------ GUI package -------------------------------------
+IMAGE_INSTALL += " libdrm"
+IMAGE_INSTALL += " lvgl"
+
+#------------------------------ User Application --------------------------------
+IMAGE_INSTALL += " terminal-ui"
+IMAGE_INSTALL += " sys-mgr"
+
+#------------------------------ Dev - Debug tools -------------------------------
+IMAGE_INSTALL += " strace"
+# IMAGE_INSTALL += " make"
+# IMAGE_INSTALL += " gcc"
+# IMAGE_INSTALL += " gdb"
+# IMAGE_INSTALL += " evtest"
+# IMAGE_INSTALL += " binutils"
+# IMAGE_INSTALL += " glibc glibc-dev"
+# IMAGE_INSTALL += " libgcc libgcc-dev"

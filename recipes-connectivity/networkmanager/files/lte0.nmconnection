@@ -9,12 +9,10 @@ autoconnect=false
 #sim-id=
 
 [ipv4]
-dns-search=
 method=auto
 
 [ipv6]
 addr-gen-mode=stable-privacy
-dns-search=
 method=auto
 
 [proxy]
