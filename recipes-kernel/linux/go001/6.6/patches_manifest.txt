@@ -1,0 +1,2 @@
+arch/arm/boot/dts/st/stm32mp15xx-dkx.dtsi
+arch/arm/boot/dts/st/stm32mp157d-dk1.dts
