@@ -27,11 +27,13 @@ do_configure() {
 
 do_compile() {
     cmake --build . --target terminal-ui
+    cmake --build . --target ui-utils
 }
 
 do_install() {
     install -d ${D}${bindir}
     install -m 755 terminal-ui ${D}${bindir}
+    install -m 755 ui-utils ${D}${bindir}
 
     install -d ${D}${sysconfdir}/dbus-1/system.d
     install -m 0644 ${S}/conf/com.TerminalUI.Service.conf ${D}${sysconfdir}/dbus-1/system.d/
