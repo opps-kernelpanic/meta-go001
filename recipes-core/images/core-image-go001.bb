@@ -15,6 +15,11 @@ IMAGE_INSTALL += " \
     kernel-modules \
 "
 
+#------------------------------ Library -----------------------------------------
+IMAGE_INSTALL += " alsa-lib"
+IMAGE_INSTALL += " libdrm"
+IMAGE_INSTALL += " libgpiod"
+
 #------------------------------ Network ----------------------------------------
 IMAGE_INSTALL += " \
     openssh \
@@ -46,7 +51,6 @@ IMAGE_INSTALL += " \
 
 #------------------------------ Audio -------------------------------------------
 IMAGE_INSTALL += " \
-    alsa-lib \
     alsa-tools \
     alsa-utils \
 "
@@ -72,10 +76,9 @@ IMAGE_INSTALL += " lrzsz"
 IMAGE_INSTALL += " i2c-tools"
 IMAGE_INSTALL += " spidev-test"
 IMAGE_INSTALL += " usbutils"
-
+IMAGE_INSTALL += " evtest"
 
 #------------------------------ GUI package -------------------------------------
-IMAGE_INSTALL += " libdrm"
 IMAGE_INSTALL += " lvgl"
 
 #------------------------------ User Application --------------------------------

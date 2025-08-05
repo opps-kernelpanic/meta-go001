@@ -4,7 +4,7 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
 inherit cmake pkgconfig
-DEPENDS = "lvgl libdrm"
+DEPENDS = "lvgl libdrm dbus"
 
 python do_display_banner() {
     bb.plain("********************************************");
@@ -27,11 +27,16 @@ do_configure() {
 
 do_compile() {
     cmake --build . --target terminal-ui
+    cmake --build . --target ui-utils
 }
 
 do_install() {
     install -d ${D}${bindir}
     install -m 755 terminal-ui ${D}${bindir}
+    install -m 755 ui-utils ${D}${bindir}
+
+    install -d ${D}${sysconfdir}/dbus-1/system.d
+    install -m 0644 ${S}/conf/com.TerminalUI.Service.conf ${D}${sysconfdir}/dbus-1/system.d/
 }
 
 addtask display_banner before do_build
